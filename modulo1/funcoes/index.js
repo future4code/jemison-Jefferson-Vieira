@@ -1,4 +1,4 @@
-/* 1. 
+/* /* 1. 
 Exercícios de interpretação de código
 Leia o código abaixo
 
@@ -62,19 +62,18 @@ console.log(numeros())
 
  */
 
-/* b. 
+
 function numeros(num1,num2) {
-    num1 = 25
-    num2 = 42
+  
     let resultado = num1 >= num2
     return resultado
 
     
 }
-console.log(numeros())
- false */
-/* 
- c. 
+console.log(numeros(4,5))
+ 
+ 
+  
  function parOuNao(numero1)
  {
  numero1 = 45
@@ -83,15 +82,15 @@ console.log(numeros())
 }
 
 parOuNao()
-false */
+false 
 
-d. 
-function estudandoFeriado(mensagem){mensagem = "estudar é todo dia !"
-mensagemMai = mensagem.toUpperCase 
-console.log(mensagemMai + mensagemMai.length)
-  }
+/* d. */ 
+ function estudandoFeriado(mensagem){  
+ return`${mensagem.length} ${mensagem.toUpperCase() }`}
+console.log(estudandoFeriado("estudando no feriado"))
+ console.log(estudandoFeriado("andrea manda muito bem "))
 
-3.
+/*  3. */ 
 function operacoesMatematica(num1, num2){
    
     let soma = num1 + num2
@@ -101,15 +100,6 @@ function operacoesMatematica(num1, num2){
    return soma  
    return subtracao
    return divisao
-   return multiplicacao
-
+   return multiplicacao */ */
 }
-
-Number(prompt("escreva um numero"))
-5
-Number(prompt("escreva outro numero"))
-8
-    operacoesMatematica(5,8)
-
-
-
+    
