@@ -25,16 +25,25 @@ function retornaArrayOrdenado(array) {
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-let novoArray
-for (novoArray = 0 ; novoArray % 2 === 0 ; novoArray++){ 
-return novoArray}
-
+    let numerosPares = [];
+    for (let i = 0; i < array; i++) {
+        if (i % 2 === 0) {
+            numerosPares.push(i)
+        }
+    }
+    return numerosPares;
 }
-retornaNumerosPares(novoArray)
+retornaNumerosPares(array) 
+
+ 
+
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
- 
+ let numeroElevado = []
+ for (let i = o ; i < array ; i ++){
+   if(i)
+ }
 }
 
 // EXERCÍCIO 06
