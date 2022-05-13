@@ -19,39 +19,52 @@ retornaArrayInvertido(array)
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-  array.sort
+  array.sort((a,b)=> a -b)
   return array
 }
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
     let numerosPares = [];
-    for (let i = 0; i < array; i++) {
-        if (i % 2 === 0) {
-            numerosPares.push(i)
+    for (let i = 0; i <= array.length; i++) {
+        if (array[i] % 2 === 0) {
+           numerosPares.push(array[i])
         }
     }
     return numerosPares;
 }
-retornaNumerosPares(array) 
+retornaNumerosPares(numerosPares) 
 
  
-
-
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
- let numeroElevado = []
- for (let i = o ; i < array ; i ++){
-   if(i)
- }
-}
+ let novoArray = []
+ for (let i = 0 ; i < array.length; i ++ ){
+   if(array[i] % 2 === 0){
+    novoArray.push(array[i]* array[i])
 
+    
+   }
+ }
+   return novoArray
+}
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
-  
+  // recebendo array de numeros 
+  let maiorNumero =[]
+  array.sort((a,b)=> a - b)
+  maiorNumero = array[array.length-1]
+  return maiorNumero
 }
 
 // EXERCÍCIO 07
+//Escreva uma função que, dados dois números, retorne um objeto com as seguintes propriedades:
+/* - `maiorNumero` → contém o maior número
+- `maiorDivisivelPorMenor` → booleano indicando se o maior é divisível pelo menor
+- `diferenca` → contém a diferença entre eles (deve ser um **número positivo** sempre)
+ */
+  //⚠️   Obs: para os testes funcionarem, as propriedades do objeto devem possuir os exatos nomes acima
+
 function retornaObjetoEntreDoisNumeros(num1, num2) {
 
 }
