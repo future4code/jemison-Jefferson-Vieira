@@ -1,0 +1,11 @@
+Faça um resumo sobre quais são os 7 passos fundamentais para a resolução de problemas
+ e como eles podem nos ajudar a solucionar nossos desafios de programação:
+
+
+Os 7 passos para a resolução de problemas durante o desenvolvimento das lógicas de programação,
+são uma forma de organizar quais as prioridades na hora de desenvolver, sendo cada passo de extrema importância.
+Já no enunciado ter atenção, ler e reler para retirar as informações mais relevantes, 
+pensar nas entradas e saídas e fazer um esquema visual e mental , pra assim quando colocarmos a 
+mão na "massa" estar mais claro o que precisamos fazer e quais métodos utilizar,criando assim um 
+código que rode da forma mais simples e por final refatorando pra deixar a leitura do código mais 
+clara possível .
