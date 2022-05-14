@@ -46,7 +46,7 @@ function retornaNumerosParesElevadosADois(array) {
     
    }
  }
-   return novoArray
+   return novoArray    
 }
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
@@ -58,12 +58,7 @@ function retornaMaiorNumero(array) {
 }
 
 // EXERCÍCIO 07
-//Escreva uma função que, dados dois números, retorne um objeto com as seguintes propriedades:
-/* - `maiorNumero` → contém o maior número
-- `maiorDivisivelPorMenor` → booleano indicando se o maior é divisível pelo menor
-- `diferenca` → contém a diferença entre eles (deve ser um **número positivo** sempre)
- */
-  //⚠️   Obs: para os testes funcionarem, as propriedades do objeto devem possuir os exatos nomes acima
+
 
 function retornaObjetoEntreDoisNumeros(num1, num2) { 
   if(num1 > num2 ){
