@@ -29,6 +29,7 @@ texto{
 }
 #menu-horizontal ul{
     display: inline;
+    margin-left: 25%
 
 
     
@@ -39,11 +40,11 @@ texto{
 }
 #menu-horizontal a{
     display: inline-block;
-    color: antiquewhite;
+    color: rgb(253, 253, 253);
 
 }
 #menu-horizontal a:hover{
-    color: #abd4cd;
+    color: #87a592;
     transition: .8s;
 }
 nav{

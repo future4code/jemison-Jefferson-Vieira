@@ -29,6 +29,7 @@ texto{
 }
 #menu-horizontal ul{
     display: inline;
+    margin-left: 25%;
 
 
     
@@ -39,7 +40,7 @@ texto{
 }
 #menu-horizontal a{
     display: inline-block;
-    color: antiquewhite;
+    color: rgb(253, 253, 253);;
 
 }
 #menu-horizontal a:hover{
@@ -54,7 +55,7 @@ ul, li{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 li{
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 480;
 }
 section{
@@ -64,4 +65,10 @@ section{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #05a387;
     width: 50%;
+}
+h4{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    margin-top: 4%;
+    color: #05a387;
 }

@@ -11,21 +11,24 @@ div{
     font-size: 22px;
     width: 50%;
     margin-top: 6% ;
-    margin-bottom: 0% ;
+    margin-bottom: 0 ;
+    letter-spacing: 1.6px;
+   
 
 }
 .texto{
 font-size: 22px ;
-font-weight: 150 ;
+font-weight: 450 ;
 }
 #menu-horizontal ul,li,a{
     list-style: none ;
     padding: 0 ;
     font-size: 15px ;
-    color: #05a387;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 10px ;
     text-decoration: none;
+
+    
 
 }
 body{
@@ -36,7 +39,7 @@ texto{
 }
 #menu-horizontal ul{
     display: inline;
-
+    margin-left: 25%;
 
     
 }
@@ -46,18 +49,18 @@ texto{
 }
 #menu-horizontal a{
     display: inline-block;
-    color: antiquewhite;
+    color: rgb(253, 253, 253);
 
 }
 #menu-horizontal a:hover{
-    color: #abd4cd;
-    transition: .8s;
+color: #05a387;
+    transition: .7s;
 }
 nav{
     background-color:#05a387;
     width: 100% ;
-    margin-top: 0%;
-   
+  margin-top: 0%;
+
 }
 
 
@@ -67,10 +70,39 @@ img{
 }
 section > img{
     margin-top: 6%;
-    ; 
+    border-radius: 60px;
+    border-color: #05a387;
+    border-width: 100% ;
 }
 
 footer{
-    background-color: #05a387;
+    background-color: #1bd8b5;
     
+}
+
+footer > ul > li > img{
+    width: 40px;
+}
+footer > ul > li{
+    display: inline;
+
+}
+ul{
+    margin-left: 38%;
+}
+.galeria{
+    background-color: #05a387;
+    width: 30%;
+    margin-right: 70%;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    object-fit: contain;
+}
+h3{
+color: #05a387;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin-top: 3%;
+}
+div> img{
+    object-fit: contain;
 }

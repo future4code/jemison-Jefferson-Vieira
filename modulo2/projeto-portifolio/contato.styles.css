@@ -30,6 +30,7 @@ texto{
 }
 #menu-horizontal ul{
     display: inline;
+    margin-left: 25%;
 
     
 }
@@ -38,11 +39,11 @@ texto{
 }
 #menu-horizontal a{
     display: inline-block;
-    color: antiquewhite;
+    color: rgb(253, 253, 253);;
 
 }
 #menu-horizontal a:hover{
-    color: #abd4cd;
+    color: #87a592;
     transition: .8s;
 }
 nav{
@@ -70,9 +71,23 @@ imput{
 
 }
 input[type=text] {
-    width: 100%;
+    height: 30px ;
+    width: 100% ;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+    border-radius: 10px ;
   }
-
+#mensagem{
+    height: 120px ;
+    box-sizing: border-box;
+}
+#email{
+    box-sizing: border-box;
+    height: 30px;
+    width: 100%;
+    padding:12px 20px;
+    margin: 8px 0;
+    border-radius:10px ;
+}
+  
