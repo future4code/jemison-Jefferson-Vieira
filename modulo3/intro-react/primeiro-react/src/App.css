@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 60vh;
+
+}
+
+.titulo{
+  margin:6vh 0 3vh 0;
+}
+
+p{
+  font-size: 1.8em;
+}
+
+.botao{
+  border: none;
+  text-decoration:underline;
+  font-size: 1em;
+}
+
+
+
+
