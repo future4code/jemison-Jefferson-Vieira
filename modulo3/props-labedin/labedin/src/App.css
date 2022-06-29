@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ 
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  z-index: 1;
+  background:linear-gradient(-45deg,rgb(122, 118, 118), rgb(68, 85, 68),rgb(145, 145, 226), grey);
+  animation: animate 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+.page-section-container {
+  width: 40vw;
+  margin: 10px 0;
+}
+
+.page-section-container > h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+}
+.page-section-container{
+  color: aliceblue;
+}
+
+@keyframes animate{
+  0%{
+  background-position: 0 50%; 
+}
+ 
+50%{
+  background-position: 100% 50%; 
+}
+  100%{
+  background-position: 0 50%; 
+}
+}

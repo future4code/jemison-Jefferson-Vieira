@@ -1,0 +1,37 @@
+.smallcard-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    border-radius: 10px;
+    border: 2px solid rgb(85, 88, 88);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    height: 12vh;
+    width: 40vw;
+    background-color: rgb(95, 107, 107);
+    
+}
+
+.smallcard-container img{
+    color: white;
+    background-color: black;
+    width: 40px;
+    margin-right: 10px;
+    margin-top: 0;
+    border-radius: 50%;  
+}
+
+.smallcard-container h4{
+    margin-right: 8px;
+    margin-top:6px;
+    color: aliceblue;
+    font-size: 1em;   
+}
+
+.smallcard-container p{
+    margin-top: 6px;
+    color: aliceblue;
+    font-size: 1em;   
+}
+
