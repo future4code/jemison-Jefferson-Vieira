@@ -15,60 +15,51 @@ const MainContainer = styled.div`
   flex-direction: column;
   align-items: center;
 `
-  //    const arrayInsta = [
-  //    { 
-  //      nomeUsuario: "Paulinha",
-  //      fotoUsuario:'https://picsum.photos/50/50',
-  //      fotoPost:'https://picsum.photos/200/150',
-  //     },
-           
-  //    { 
-  //      nomeUsuario:"Django",
-  //      fotoUsuario: djangoFoto ,
-  //     fotoPost: foto1,
-  //   },
 
-  //  {
-  //     nomeUsuario: "Cristina" ,
-  //       fotoUsuario: cristinaFoto ,
-  //      fotoPost: foto2 ,
-  //      }
-  //    ]
-  //   const Usuarios = arrayInsta.map((usuario,index)=>{
-  //  return <Post key={index}>
-  //     <div>
-  //        {usuario.nomeUsuario}
-  //      {usuario.fotoUsuario}
-  //       </div>   
-  //     <div>
-  //      {usuario.fotoUsuario}
-  //      </div>  
-  //   </Post >
 
-  // })
 
-  // console.log({Usuarios})
 function App() {
-  
-  
+     const arrayInsta = [
+     { 
+       nomeUsuario: "Paulinha",
+       fotoUsuario:'https://picsum.photos/50/50',
+       fotoPost:'https://picsum.photos/200/150',
+      },
+           
+     { 
+       nomeUsuario:"Django",
+       fotoUsuario: djangoFoto ,
+      fotoPost: foto1,
+    },
+
+   {
+      nomeUsuario: "Cristina" ,
+        fotoUsuario: cristinaFoto ,
+       fotoPost: foto2 ,
+       }
+     ]
+
+     
+    const Usuarios = arrayInsta.map((usuario,index)=>{
+   return <Post key={index}>
+      <div>
+         {usuario.nomeUsuario}
+       {usuario.fotoUsuario}
+        </div>   
+      <div>
+       {usuario.fotoPost}
+       </div>  
+    </Post >
+
+  })
+
+  console.log({Usuarios})
+
+
 return(
   <MainContainer>
-           
-           <Post
-               nomeUsuario={'Paulinha'}
-               fotoUsuario={'https://picsum.photos/50/50'}
-               fotoPost={'https://picsum.photos/200/150'}
-           />
-         <Post
-              nomeUsuario={'Django'}
-              fotoUsuario={djangoFoto}
-              fotoPost={foto1}
-    />
-     <Post
-               nomeUsuario={'Cristina'}
-               fotoUsuario={cristinaFoto}
-               fotoPost={foto2}
-    />
+         {Usuarios}  
+        
        </MainContainer>
 )}
 
