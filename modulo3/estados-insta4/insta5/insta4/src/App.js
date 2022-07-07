@@ -1,13 +1,10 @@
 import React from 'react';
 import styled from 'styled-components'
 import Post from './components/Post/Post';
- import foto1 from './img/img.beach.labenu.jpg';
- import foto2 from './img/img.universo.labetube.jpg';
- import djangoFoto from './img/img.django.jpg';
- import cristinaFoto from './img/img.cristina.jpg';
-//  import { SecaoComentario } from './components/SecaoComentario/SecaoComentario';
-//  import { IconeComContador } from './components/IconeComContador/IconeComContador';
-
+import foto1 from './img/img.beach.labenu.jpg';
+import foto2 from './img/img.universo.labetube.jpg';
+import djangoFoto from './img/img.django.jpg';
+import cristinaFoto from './img/img.cristina.jpg';
 
 const MainContainer = styled.div`
   display: flex;
@@ -16,9 +13,7 @@ const MainContainer = styled.div`
   align-items: center;
 `
 
-
-
-function App() {
+  function App() {
      const arrayInsta = [
      { 
        nomeUsuario: "Paulinha",
@@ -41,19 +36,19 @@ function App() {
 
      
     const Usuarios = arrayInsta.map((usuario,index)=>{
-   return <Post key={index}>
-      <div>
-         {usuario.nomeUsuario}
-       {usuario.fotoUsuario}
-        </div>   
-      <div>
-       {usuario.fotoPost}
-       </div>  
-    </Post >
+   return( <Post key={index}
 
-  })
+       
+    nomeUsuario =    {usuario.nomeUsuario}
+    fotoUsuario =    {usuario.fotoUsuario}
+    fotoPost    =    {usuario.fotoPost}
+      
 
-  console.log({Usuarios})
+     />
+   )
+   })
+
+ console.log({Usuarios})
 
 
 return(
