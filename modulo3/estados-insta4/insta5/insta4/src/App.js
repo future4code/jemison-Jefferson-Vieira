@@ -14,6 +14,13 @@ const MainContainer = styled.div`
 `
 
   function App() {
+
+      const [inputNome, setInputNome] = useState("")
+      const [inputIdade, setInputIdade] = useState("")
+      const [Usuarios, setUsuarios] = useState("")
+
+      
+    
      const arrayInsta = [
      { 
        nomeUsuario: "Paulinha",
@@ -34,28 +41,66 @@ const MainContainer = styled.div`
        }
      ]
 
+     const handleInputNome = (e) => {
+      setInputNome(e.target.value)
+    }
+    const handleInputIdade = (e) => {
+      setInputIdade(e.target.value)
+    }
+    const addUsuario = (e) => {
+      e.preventDefault();
+      const novoUsuario = {nomeUsuario: inputNome, idadeUsuario: inputIdade}
+      const novaListaDeUsuarios = [...arrayInsta, novoUsuario]
+      setPessoas(novaListaDeUsuarios)
+    }
+  
+
      
-    const Usuarios = arrayInsta.map((usuario,index)=>{
-   return( <Post key={index}
+    const UsuariosNovo = arrayInsta.map((usuario,index)=>{
+      const deletarUsuario=()=>{
+        const novoUsuarios=[...arrayInsta]
+        const deletar = Usuarios.findIndex((usuarioExcluido)=>{
+          return usuarioExcluido === Usuarios
+        })
+        novoUsuarios.splice(deletar,1)
+        setarrayInsta(novoUsuarios)
+      }
+   
 
-       
-    nomeUsuario =    {usuario.nomeUsuario}
-    fotoUsuario =    {usuario.fotoUsuario}
-    fotoPost    =    {usuario.fotoPost}
-      
-
-     />
-   )
-   })
+   return (
+    <Post key={index}>
+      <p>{Usuarios.nome}</p>
+      <p className='coral'>{Usuarios.idade}</p>
+      <button onClick={deletarUsuario}>X</button>
+    </Post>
+  )
+})
 
  console.log({Usuarios})
 
 
-return(
+
+ return (
   <MainContainer>
-         {Usuarios}  
-        
-       </MainContainer>
-)}
+    <Form>
+      <label>Nome:</label>
+      <input
+        placeholder='Insira um nome'
+        value={inputNome}
+        onChange={handleInputNome}
+      />
+      <label>Idade:</label>
+      <input
+        placeholder='Insira uma idade'
+        value={inputIdade}
+        onChange={handleInputIdade}
+      />
+      <button onClick={addPessoa}>Adicionar</button>
+    </Form>
+    {listaDeUsuarios}
+  </MainContainer>
+)
+}
+
 
 export default App;
