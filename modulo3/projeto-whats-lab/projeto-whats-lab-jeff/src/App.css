@@ -20,6 +20,7 @@ body{
     display: flex;
     flex-direction: column;
     border-right:1px solid #DDD;
+  
 
 }
 
@@ -75,7 +76,24 @@ outline: 0;
 background-color: trasparent;
 margin-left: 10px;
 }
-/* .contentArea{
+.contentArea{
+ flex: 1;
   
-} */
+}
 
+
+.chatList{
+    flex: 1;
+    background-color: #FFF;
+    overflow-y: auto;
+}
+
+.chatList::-webkit-scrollbar{
+    width: 6px;
+    height: 6px;
+
+}
+
+.chatList::-webkit-scrollbar-thumb{
+    background-color: rgb(0, 0, 0, 0.2);
+}
