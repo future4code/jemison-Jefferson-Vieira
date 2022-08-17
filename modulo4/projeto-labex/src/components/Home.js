@@ -6,11 +6,11 @@ import { useNavigate } from "react-router-dom";
 function Home(){
     const navigate= useNavigate()
     const goToLista=() =>{
-        navigate("/Lista")
+        navigate("/listaPublic")
       }
   
       const goToAdmin=() =>{
-        navigate("/Admin")
+        navigate("/login")
       }
     return(
         <div>

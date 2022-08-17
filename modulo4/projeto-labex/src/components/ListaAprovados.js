@@ -4,7 +4,7 @@ function ListaAprovados(){
     return(
 
         <div>
-
+         <h1>Lista aprovados</h1> 
         </div>
     )
 }

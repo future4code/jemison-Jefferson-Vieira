@@ -5,7 +5,7 @@ function Aprovacao(){
     return(
 
         <div>
-         <p>Aprovacao</p>
+         <h1>Aprovacao</h1>
         </div>
     )
 }

@@ -3,7 +3,9 @@ import React from 'react';
 
 function ListaForm(){
     return(
-        <div></div>
+        <div>
+            <h1>Lista From Public</h1>
+        </div>
     )
 
 
