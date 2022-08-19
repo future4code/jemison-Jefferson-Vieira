@@ -1,9 +1,13 @@
-import React, { useEffect } from "react";
-import axios from "axios";
-import {useState} from 'react';
-import useRequestData from "./useRequestData";
+import React from "react";
+import useRequestData from "../hooks/useRequestData";
+import {useNavigate} from 'react-router-dom';
 
 function ListaExistentes(){
+    const navigate= useNavigate()
+    const goToFormulario=() =>{
+        navigate("/formulario")
+      }
+  
     
      const [data] = useRequestData('/trips')
      
@@ -22,7 +26,7 @@ function ListaExistentes(){
      
         <div>
          <h1>Lista existentes</h1>
-        
+          <button onClick={goToFormulario} >Formulário de Inscrição</button>    
          {listaPublica}
         </div>
 

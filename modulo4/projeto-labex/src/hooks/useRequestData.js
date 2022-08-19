@@ -1,18 +1,18 @@
 import React from "react";
 import { useEffect,useState } from "react";
-import { BASEURL } from "./constatesApi";
+import { BASEURL } from "../constants/constatesApi";
 import axios from 'axios';
 
 
-function useRequestData(finalUrl){
+function useRequestData(){
     const[data,setData]=useState([])
 
 
      useEffect(()=>{
  
-     axios.get(`${BASEURL}${finalUrl}`)
+     axios.get(`${BASEURL}`)
      .then((response)=>{
-        setData(response.data.trips)
+        setData(response.data)
         console.log(data)
      })
      

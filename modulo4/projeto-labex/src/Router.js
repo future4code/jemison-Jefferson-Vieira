@@ -10,19 +10,19 @@ import CriarViagem from './components/CriarViagem';
 import DetalhesViagem from './components/DetalhesViagem';
 import ListaCandidatos from './components/ListaCandidatos';
 import ListaAprovados from './components/ListaAprovados';
-import Home from './components/Home';
+import HomePage from './components/HomePage';
 import ListaViagemAdm from './components/ListaViagemAdm';
 
-function HomePage(){
+function Router(){
   
     return(
 
            <BrowserRouter>
               <Routes>
-                <Route index element={ <Home/>}/>
+                <Route index element={ <HomePage/>}/>
                 <Route path="/listaPublic" element={<ViagensPublic />}/>
                 <Route path="/existentes" element={<ListaExistentes />}/>
-                <Route path="/formInsc" element={<ListaForm />}/>
+                <Route path="/formulario" element={<ListaForm />}/>
                 <Route path="login" element={<Autenticacao/>} />
                 <Route path="adm" element= {<ViagensAdm />} />
                 <Route path="listaAdm" element= {<ListaViagemAdm />} />
@@ -41,4 +41,4 @@ function HomePage(){
 }
 
 
-export default HomePage;
+export default Router;
