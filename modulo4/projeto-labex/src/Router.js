@@ -3,7 +3,7 @@ import {BrowserRouter, Route, Routes}from 'react-router-dom';
 import Aprovacao from './components/Aprovavao';
 import ViagensPublic from './components/ViagensPublic';
 import ListaExistentes from './components/ListaExitentes'
-import ListaForm from './components/ListaForm';
+import ApplicationForm from './components/ApplicationForm';
 import Autenticacao from './components/Autenticacao';
 import ViagensAdm from './components/ViagensAdm';
 import CriarViagem from './components/CriarViagem';
@@ -22,7 +22,7 @@ function Router(){
                 <Route index element={ <HomePage/>}/>
                 <Route path="/listaPublic" element={<ViagensPublic />}/>
                 <Route path="/existentes" element={<ListaExistentes />}/>
-                <Route path="/formulario" element={<ListaForm />}/>
+                <Route path="/formulario" element={<ApplicationForm />}/>
                 <Route path="login" element={<Autenticacao/>} />
                 <Route path="adm" element= {<ViagensAdm />} />
                 <Route path="listaAdm" element= {<ListaViagemAdm />} />

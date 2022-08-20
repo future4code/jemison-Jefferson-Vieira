@@ -7,8 +7,11 @@ import {useState} from 'react'
             const{name,value}=e.target
             setForm({...form,[name]:value})
         }
+        const clear=()=>{
+            setForm(initialState)
+        }
       
-        return[form]
+        return{form, onChange, clear}
     }
 
 

@@ -1,59 +1,76 @@
-import React, { useState } from "react";
-// import { BASEURL } from "../constants/constatesApi";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import useForm from "../hooks/useForm";
+import swal from 'sweetalert2';
+
+function ApplicationForm() {
 
 
-function ListaForm() {
-         const{form,onChange,}=useForm({
+            const{form,onChange,clear}=useForm({
             name:"",
             age:"",
             applicationText:"",
             profession:"",
             country:"",
          }) 
-     const cadastrado=()=>{
-    axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/darvas/trips/`${id}`/apply",
-    )
-    .then((response)=>{
-        form(response.data)
-        .catch((error)=>{
-            console.log("deu erro", error.response)
-        })
-    })
-   
-          }
-  const onClick=(e)=>{
-     e.preventDefault(form)
-  }
-  
+
+         
+                    
+                    const apply = (e) => {
+                    const body = {
+                    ...form
+                    }
+
+                    axios.post(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/jefferson-vieira-jemison/trips/:id/apply`, body)
+                    .then(res => {
+                        swal.fire({
+                        icon: 'success',
+                        title: 'Sucesso! Boa Sorte!',
+                        })
+                     
+                    }).catch(err => {
+                        swal.fire({
+                        icon: 'error',
+                        title: 'OOOPS...',
+                        text: 'Algo deu errado... tente novamente mais tarde',
+                        })
+                    })
+                    e.preventDefault()
+                }
+
+
+      
+
   return (
             <div>
                     
                 <h1>Lista From Public</h1>
                 <div>
-                <form onSubmit={onClick} > 
-
-                    <div key={form.id}>
-                    <p>Name:</p>
+                <form  > 
+                    <div>
+                   
                     <input  
                     type="text"
                     placeholder="Insert Name"
                     value={form.name}
-                    onChange={onChange}>
+                    onChange={onChange}
+                    name ={"name"}
+                    >
                     </input>
-
+            
                     </div>  
 
                     <div>
                     <p>Age:</p>
                     <input 
-                    type="text"
+                    type="number"
                     placeholder="Insert Age"
                     value={form.age}
                     onChange={onChange}
-                    handleInput={form}>
-                        </input>
+                    name ={"age"}
+                    min={"18"}
+                    >
+                    </input>
                     </div>  
                     <div>
                     <p>ApplicationText:</p>
@@ -61,7 +78,8 @@ function ListaForm() {
                     type="text"
                     placeholder="Insert Application Text"
                     value={form.applicationText}
-                    onChange={onChange}>
+                    onChange={onChange}
+                      name ={"applicationText"}>
                     </input>
 
                     </div>  
@@ -71,7 +89,8 @@ function ListaForm() {
                     type="text"
                     placeholder="Insert Profession"
                     value={form.profession}
-                    onChange={onChange}>
+                    onChange={onChange}
+                      name ={"profession"}>
                     </input>
 
                     </div>  
@@ -81,20 +100,22 @@ function ListaForm() {
                     type="text"
                     placeholder="Insert Country"
                     value={form.country}
-                    onChange={onChange}>
+                    onChange={onChange}
+                    name ={"country"}
+                    >
                         </input>
 
                     </div>  
                     <div>
-                    <button type="submit">Salvar</button>
+                    <button onClick={apply }>Salvar</button>
                     </div>
                     </form> 
                 </div>
              
 
-
+ 
             </div>
 
   );
 }
-export default ListaForm;
+export default ApplicationForm;
