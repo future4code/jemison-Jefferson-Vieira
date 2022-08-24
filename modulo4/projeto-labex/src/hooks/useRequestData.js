@@ -1,18 +1,18 @@
 import {useState, useEffect} from "react";
 import axios from "axios";
+import { url } from "../constants/constantesApi";
 
 
 
 
 
-const url="https://us-central1-labenu-apis.cloudfunctions.net/labeX/jefferson-vieira-jemison"
-const useRequestData = () =>{
-    const [data, setData] = useState(undefined)
+const useRequestData = (endpoint, initialState) =>{
+    const [data, setData] = useState(initialState)
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError]= useState("")
     useEffect(() =>{
         setIsLoading(true)
-        axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/jefferson-vieira-jemison/trips")
+        axios.get(`${url}${endpoint}`)
         .then((response) =>{
             setIsLoading(false)
             setData(response.data)

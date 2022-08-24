@@ -2,8 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import useForm from "../hooks/useForm";
 import swal from 'sweetalert2';
-
+import { useNavigate } from "react-router-dom";
 function ApplicationForm() {
+
+    const navigate= useNavigate()
+    const goToListaExistentes=() =>{
+        navigate("/existentes")
+      }
+   
 
 
             const{form,onChange,clear}=useForm({
@@ -109,6 +115,7 @@ function ApplicationForm() {
                     <div>
                     <button onClick={apply }>Salvar</button>
                     </div>
+                    <button onClick={goToListaExistentes} >Voltar</button> 
                     </form> 
                 </div>
              
