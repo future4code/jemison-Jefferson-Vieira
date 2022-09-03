@@ -30,3 +30,6 @@ Consulte a seção sobre [implantação](https://facebook.github.io/create-react
 
 ### surge ./build
 Deployando a aplicação em um servidor externo .
+
+## link do Surge 
+https://strange-moon.surge.sh/
