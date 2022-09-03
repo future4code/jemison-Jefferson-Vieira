@@ -12,11 +12,12 @@ export const GlobalStyle = createGlobalStyle`
    }
 
    h1{
+    font-size:70px;  
     font-family: 'Jolly Lodger', cursive;
     color: var(--green);
    }
 
-   h2 , h3{
+   h2 , h3 {
     font-family:'Staatliches', cursive;
     color: var(--yellow);
    }
@@ -25,6 +26,11 @@ export const GlobalStyle = createGlobalStyle`
     font-family:'Rajdhani', sans-serif;
     background: var(--deep-blue);
     color: var(--soft-white);
+   }
+
+   button{
+      font-family:'Staatliches', cursive;
+     
    }
 
    *{

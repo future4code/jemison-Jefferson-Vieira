@@ -7,21 +7,25 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
     padding: 1rem ;
 }
 
 aside{
-    min-width: 15%;
+    
+ 
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
 }
 
 form{
     display:flex;
     flex-direction:column;
     justify-content:center;
-    max-width:40%;
+    max-width:70%;
     margin:auto;
-   
+    width:40vw;
 
     margin: 20px 0px 0px 20px;
     button{
