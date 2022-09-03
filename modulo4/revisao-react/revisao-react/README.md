@@ -33,3 +33,6 @@ Deployando a aplicação em um servidor externo .
 
 ## link do Surge 
 https://strange-moon.surge.sh/
+
+
+## Autor Jefferson Vieira em turma Jemison Labenu ##
