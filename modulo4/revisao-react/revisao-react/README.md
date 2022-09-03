@@ -1,4 +1,4 @@
-**Projeto de Revisão ReactJs Rick and Morty **
+## Projeto de Revisão ReactJs Rick and Morty ##
 
 Este projeto visa a demonstração de uma aplicação com a criação de perfis, busca por nome e ordenação , página de detalhes e remover perfil 
 
