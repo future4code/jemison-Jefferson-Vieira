@@ -1,7 +1,7 @@
 import Card from "../../components/Card/Card";
 import { Header } from "../../components/Header/Header";
 import { HomePageContainer } from "./styles";
-import { useState } from "react";
+// import { useState } from "react";
 
 export function HomePage(props) {
   const { characters } = props;
@@ -11,20 +11,21 @@ export function HomePage(props) {
     handleInputName,
     handleInputSpecies,
     handleInputQuery,
-    handleInputOrderPram,
+    handleInputOrderParam,
   } = props.handlers;
   const { addCharacter } = props;
   const { removeCharacter } = props;
   const { changePage } = props;
-  console.log("chegou na homepage", characters);
+ 
 
   const renderList = characters
-    .filter((char) => query === "" || char.name.toLowerCase().includes(query))
+    .filter(char => query === "" || char.name.includes(query))
+    
     .sort((a, b) =>
-      orderParam === "" || (orderParam === "asc" && a.name > b.name) ? 1 : -1
+      (orderParam === "" || orderParam === "cresc" )&& a.name > b.name ? 1 : -1
     )
     .sort((a, b) =>
-      orderParam === "" || (orderParam === "desc" && a.name > b.name) ? -1 : 1
+      (orderParam === "" || orderParam === "desc") && a.name > b.name ? -1 : 1
     )
     .map((char) => {
       return (
@@ -42,8 +43,9 @@ export function HomePage(props) {
 
   return (
     <>
+     <Header />
       <HomePageContainer>
-        <Header />
+       
         <aside>
           <form>
             <h2>Criar Personagem</h2>
@@ -80,10 +82,10 @@ export function HomePage(props) {
               name=""
               id=""
               value={orderParam}
-              onChange={handleInputOrderPram}
-            >
-              <option value="asc">Crescente</option>
+              onChange={handleInputOrderParam}>
+              <option value="cresc">Crescente</option>
               <option value="desc">Decrescente</option>
+              
             </select>
           </form>
         </aside>

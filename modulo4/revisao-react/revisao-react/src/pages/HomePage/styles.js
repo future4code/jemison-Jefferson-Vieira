@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const HomePageContainer =styled.div`
+    display: flex;
+    width: 100%;
+
 main{
     display:flex;
-    width:100%;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -11,11 +13,7 @@ main{
 }
 
 aside{
-    
- 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+      min-width: 15%;
     
 }
 

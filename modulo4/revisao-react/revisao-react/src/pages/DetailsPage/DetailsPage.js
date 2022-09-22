@@ -8,7 +8,7 @@ export function DetailsPage(props) {
   const { changePage } = props;
 
   const [character] = characters.filter((char) => char.id === id);
-  console.log(characters);
+//  console .log(characters);
   return (
     <>
       <Header />
