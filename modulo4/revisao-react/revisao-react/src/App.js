@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Card from "./components/Card/Card";
-import { Header } from "./components/Header/Header";
-import { results } from "./Data/Data";
+// import Card from "./components/Card/Card";
+// import { Header } from "./components/Header/Header";
+// import { results } from "./Data/Data";
 import { GlobalStyle } from "./GlobalStyle";
 import { DetailsPage } from "./pages/DetailsPage/DetailsPage";
 import { HomePage } from "./pages/HomePage/Homepage";
@@ -60,14 +60,15 @@ function App() {
 
   const removeCharacter = (id) => {
     const filteredList = characters.filter((char) => {
-      return char.id != id;
+      return char.id  !== id;
     });
     setCharacters(filteredList);
   };
 
   const renderPage = () => {
-    switch (page) {
-      case "homepage":
+    switch (page) 
+    {
+      case "homepage": 
         return (
           <HomePage
             characters={characters}

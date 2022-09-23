@@ -19,7 +19,7 @@ export function HomePage(props) {
  
 
   const renderList = characters
-    .filter(char => query === "" || char.name.includes(query))
+    .filter(char => query === "" || char.name.toLowerCase().includes(query))
     
     .sort((a, b) =>
       (orderParam === "" || orderParam === "cresc" )&& a.name > b.name ? 1 : -1
