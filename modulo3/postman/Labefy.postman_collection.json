@@ -1,0 +1,627 @@
+{
+	"info": {
+		"_postman_id": "b3876b30-e8a0-4b10-ac83-5f4b5ea8ae45",
+		"name": "Labefy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22404948"
+	},
+	"item": [
+		{
+			"name": "create-playlist-rock",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jefferson-vieira-jemison",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"playlist-rock\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-track-playlist",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "search-playlist-1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jefferson-vieira-jemison",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/search?name=rock",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "rock"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jefferson-vieira-jemison",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/search?name=rock",
+							"protocol": "https",
+							"host": [
+								"us-central1-labenu-apis",
+								"cloudfunctions",
+								"net"
+							],
+							"path": [
+								"labefy",
+								"playlists",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "rock"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"b2-PRrSMf5yEx6GqKpVyXXoSK7Ek5Y\""
+						},
+						{
+							"key": "Function-Execution-Id",
+							"value": "5dbutkkkmzdb"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Cloud-Trace-Context",
+							"value": "b854ad655af42eb5a5fe187b4fd009cd"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 28 Jul 2022 17:40:37 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Google Frontend"
+						},
+						{
+							"key": "Content-Length",
+							"value": "178"
+						},
+						{
+							"key": "Alt-Svc",
+							"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": {\n        \"quantity\": 2,\n        \"playlist\": [\n            {\n                \"id\": \"471f5df2-3a47-4cc2-97ae-eeb008b869f0\",\n                \"name\": \"playlist-rock\"\n            },\n            {\n                \"id\": \"6965ed01-e3fa-4b52-924b-5f16b7e892f1\",\n                \"name\": \"playlist-rock-1\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "add-track1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jefferson-vieira-jemison",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"black\", \r\n    \"artist\": \"Pearl Jam\",\r\n    \"url\": \"https://www.youtube.com/watch?v=qgaRVvAKoqQ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "6965ed01-e3fa-4b52-924b-5f16b7e892f1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-track2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jefferson-vieira-jemison",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Crazy\", \r\n    \"artist\": \"Aesrosmith\",\r\n    \"url\": \"https://www.youtube.com/watch?v=NMNgbISmF4I\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "6965ed01-e3fa-4b52-924b-5f16b7e892f1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-track3-unliked",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jefferson-vieira-jemison",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Welcome to the jungle\", \r\n    \"artist\": \"Guns n' Roses\",\r\n    \"url\": \"https://www.youtube.com/watch?v=wXwYSgprIIM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "6965ed01-e3fa-4b52-924b-5f16b7e892f1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-track4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jefferson-vieira-jemison",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Zóio de Lula\", \r\n    \"artist\": \"Charlie Brown Jr\",\r\n    \"url\": \"https://www.youtube.com/watch?v=yxemQD_VyF8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "6965ed01-e3fa-4b52-924b-5f16b7e892f1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jefferson-vieira-jemison",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"stand by me \", \r\n    \"artist\": \"Ben E. King \",\r\n    \"url\": \"https://www.youtube.com/watch?v=hwZNL7QVJjE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "6965ed01-e3fa-4b52-924b-5f16b7e892f1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-track",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jefferson-vieira-jemison",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks/:trackId",
+							"protocol": "https",
+							"host": [
+								"us-central1-labenu-apis",
+								"cloudfunctions",
+								"net"
+							],
+							"path": [
+								"labefy",
+								"playlists",
+								":playlistId",
+								"tracks",
+								":trackId"
+							],
+							"variable": [
+								{
+									"key": "playlistId",
+									"value": "6965ed01-e3fa-4b52-924b-5f16b7e892f1"
+								},
+								{
+									"key": "trackId",
+									"value": "2f88fb3b-7c1f-46d4-954a-07a252c2372e"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Function-Execution-Id",
+							"value": "ok4j20b3qnn5"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Cloud-Trace-Context",
+							"value": "913c725939c34a14b0e11b4bc04f7fa6;o=1"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 28 Jul 2022 20:14:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html"
+						},
+						{
+							"key": "Server",
+							"value": "Google Frontend"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Alt-Svc",
+							"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "search-track-id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "jefferson-vieira-jemison",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "6965ed01-e3fa-4b52-924b-5f16b7e892f1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "jefferson-vieira-jemison",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+							"protocol": "https",
+							"host": [
+								"us-central1-labenu-apis",
+								"cloudfunctions",
+								"net"
+							],
+							"path": [
+								"labefy",
+								"playlists",
+								":playlistId",
+								"tracks"
+							],
+							"variable": [
+								{
+									"key": "playlistId",
+									"value": "6965ed01-e3fa-4b52-924b-5f16b7e892f1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"2f0-zmxhvNc9O5PrRcK8CRNMfOy13sc\""
+						},
+						{
+							"key": "Function-Execution-Id",
+							"value": "gnyptfkknhua"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Cloud-Trace-Context",
+							"value": "dd9cfb3636dbbc5380f2c31a16d6854a"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 28 Jul 2022 20:12:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Google Frontend"
+						},
+						{
+							"key": "Content-Length",
+							"value": "752"
+						},
+						{
+							"key": "Alt-Svc",
+							"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": {\n        \"quantity\": 5,\n        \"tracks\": [\n            {\n                \"id\": \"e8f53248-02fa-436b-ab57-955a498b08ba\",\n                \"name\": \"black\",\n                \"artist\": \"Pearl Jam\",\n                \"url\": \"https://www.youtube.com/watch?v=qgaRVvAKoqQ\"\n            },\n            {\n                \"id\": \"e9395a03-7d86-45d3-be52-d52c590eeeb8\",\n                \"name\": \"Crazy\",\n                \"artist\": \"Aesrosmith\",\n                \"url\": \"https://www.youtube.com/watch?v=NMNgbISmF4I\"\n            },\n            {\n                \"id\": \"2f88fb3b-7c1f-46d4-954a-07a252c2372e\",\n                \"name\": \"Welcome to the jungle\",\n                \"artist\": \"Guns n' Roses\",\n                \"url\": \"https://www.youtube.com/watch?v=wXwYSgprIIM\"\n            },\n            {\n                \"id\": \"da060ee0-f7b8-47d5-a6f0-396458b507c1\",\n                \"name\": \"Zóio de Lula\",\n                \"artist\": \"Charlie Brown Jr\",\n                \"url\": \"https://www.youtube.com/watch?v=yxemQD_VyF8\"\n            },\n            {\n                \"id\": \"557b3dd3-d9e1-45ee-ba92-de05d0fd8aaf\",\n                \"name\": \"stand by me \",\n                \"artist\": \"Ben E. King \",\n                \"url\": \"https://www.youtube.com/watch?v=hwZNL7QVJjE\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		}
+	]
+}
